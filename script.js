@@ -81,7 +81,7 @@ const account4 = {
     '2023-06-22T23:36:17.929Z',
     '2023-06-22T23:36:17.929Z',
   ],
-  currency: 'PKR',
+  currency: 'GBP',
   locale: 'en-US',
 };
 
@@ -459,6 +459,7 @@ const deleteAccount = function (e) {
   inputClosePin.blur();
 };
 btnClose.addEventListener('click', deleteAccount);
+
 
 
 
