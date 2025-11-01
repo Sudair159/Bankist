@@ -4,7 +4,7 @@
 
 // Data
 const account1 = {
-  owner: 'Jonas Schmedtmann',
+  owner: 'Cornell University',
   movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
   movForLoan: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
   interestRate: 1.2, // %
@@ -21,8 +21,8 @@ const account1 = {
     '2023-05-19T23:36:17.929Z',
     '2023-05-22T10:51:36.790Z',
   ],
-  currency: 'EUR',
-  locale: 'pt-PT', // de-DE
+  currency: 'USD',
+  locale: 'eng-US', // de-DE
 };
 
 const account2 = {
@@ -338,14 +338,16 @@ const login = function (e) {
     updateUI(account);
     // Start Timer
     restartTimer();
+
+    hideLogin.classList.add('hidden');
+    logout.classList.remove('hidden');
+  } else {
+    alert('Incorrect Credentials');
   }
   // Clear Inputs
   inputLoginUsername.value = '';
   inputLoginPin.value = '';
   inputLoginPin.blur();
-
-  hideLogin.classList.add('hidden');
-  logout.classList.remove('hidden');
 };
 btnLogin.addEventListener('click', login);
 
